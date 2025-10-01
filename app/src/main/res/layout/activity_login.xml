@@ -15,9 +15,9 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_24_px_flag"
+            android:layout_gravity="left"
             android:padding="15dp"
-            android:layout_gravity="left" />
+            app:srcCompat="@drawable/ic_24_px_flag" />
 
         <TextView
             android:layout_width="wrap_content"

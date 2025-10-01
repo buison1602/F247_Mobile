@@ -19,10 +19,8 @@ class LoginViewModel(val loginRepo: LoginRepo) : ViewModel() {
             val response = loginRepo.checkPhone(CheckPhone(username, password))
 
             if (response != null) {
-                Log.d("123123123123-------------", response.toString())
                 check?.invoke(response)
             }
         }
     }
-
 }

@@ -54,4 +54,14 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
 
+    // Son
+    <string name="news">News</string>
+    <string name="scores">Scores</string>
+    <string name="discover">Discover</string>
+    <string name="account">Account</string>
+    <string name="name_category_news_item">Category</string>
+
+
+
+
 </resources>

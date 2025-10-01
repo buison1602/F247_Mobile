@@ -3,7 +3,7 @@
     <dimen name="descript_size">14.5sp</dimen>
     <dimen name="main_size">17sp</dimen>
     <dimen name="font_otp_size">35sp</dimen>
-    <dimen name="ts_home_menu">11sp</dimen>
+    <dimen name="ts_home_menu">15sp</dimen>
     <dimen name="home_margin">15dp</dimen>
     <dimen name="padding_item">15dp</dimen>
     <dimen name="min_height">60dp</dimen>
@@ -11,5 +11,7 @@
     <dimen name="margin_form_login">38dp</dimen>
     <dimen name="text_size_home">16sp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    // SON
 
 </resources>
