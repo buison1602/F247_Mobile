@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_24_px_flag"
-            android:padding="4dp" />
+            android:padding="8dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -53,7 +53,7 @@
         android:padding="5dp"
         android:layout_marginTop="5dp"
         android:orientation="horizontal"
-        android:background="@color/color_menu"
+        android:background="@color/white"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@id/llBanner"
         app:layout_constraintStart_toStartOf="parent"

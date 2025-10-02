@@ -16,11 +16,14 @@ sealed class ArticleNewsViewHolder(binding: ViewBinding) : RecyclerView.ViewHold
 
         fun bind(firstArticle: News.FirstArticle) {
             binding.tvTitle.text = firstArticle.article.title
+//            Picasso.get()
+//                .load(firstArticle.article.bgrImg.toImageUrl())
+//                .into(binding.ivImage)
             Picasso.get()
-                .load(firstArticle.article.bgrImg.toImageUrl())
+                .load("http://192.168.1.118:7087/Images/son-01-0.jpg")
                 .into(binding.ivImage)
             binding.tvAuthor.text = "MRBEAST"
-            binding.tvCmtCount.text = "50 views"
+            binding.tvCmtCount.text = "50 comments"
         }
 
     }
@@ -34,7 +37,7 @@ sealed class ArticleNewsViewHolder(binding: ViewBinding) : RecyclerView.ViewHold
                 .load("http://192.168.1.118:7087/Images/son-01-0.jpg")
                 .into(binding.ivImage)
             binding.tvAuthor.text = "Doraemon"
-            binding.tvCmtCount.text = "99 views"
+            binding.tvCmtCount.text = "99 comments"
         }
 
     }
