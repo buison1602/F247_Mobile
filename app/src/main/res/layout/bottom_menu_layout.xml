@@ -23,7 +23,9 @@
             android:padding="10dp"
             android:text="@string/news"
             android:textSize="@dimen/ts_home_menu"
-            android:textColor="@color/menu_home" />
+            android:textColor="@color/menu_home"
+            android:clickable="true"
+            android:focusable="true"/>
 
         <TextView
             android:id="@+id/scores"
@@ -34,7 +36,9 @@
             android:padding="10dp"
             android:text="@string/scores"
             android:textSize="@dimen/ts_home_menu"
-            android:textColor="@color/menu_home" />
+            android:textColor="@color/menu_home"
+            android:clickable="true"
+            android:focusable="true"/>
 
         <TextView
             android:id="@+id/discover"
@@ -45,7 +49,9 @@
             android:padding="10dp"
             android:text="@string/discover"
             android:textSize="@dimen/ts_home_menu"
-            android:textColor="@color/menu_home" />
+            android:textColor="@color/menu_home"
+            android:clickable="true"
+            android:focusable="true"/>
 
         <TextView
             android:id="@+id/account"
@@ -56,7 +62,9 @@
             android:padding="10dp"
             android:text="@string/account"
             android:textSize="@dimen/ts_home_menu"
-            android:textColor="@color/menu_home" />
+            android:textColor="@color/menu_home"
+            android:clickable="true"
+            android:focusable="true"/>
 
     </LinearLayout>
 

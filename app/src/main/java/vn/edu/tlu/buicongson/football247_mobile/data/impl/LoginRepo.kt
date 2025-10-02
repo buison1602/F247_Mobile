@@ -8,7 +8,7 @@ interface LoginRepo {
     suspend fun checkPhone(apply: CheckPhone) : LoginResponse?
 }
 
-class LoginRepoIml(val service: Service) : LoginRepo {
+class LoginRepoImpl(val service: Service) : LoginRepo {
     override suspend fun checkPhone(login: CheckPhone): LoginResponse? {
         return service.checkPhone(login)
     }

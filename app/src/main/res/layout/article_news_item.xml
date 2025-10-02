@@ -8,10 +8,11 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
         app:srcCompat="@drawable/ic_24_px_flag"
-        android:padding="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
@@ -20,9 +21,11 @@
         android:id="@+id/tvTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="32dp"
         android:textStyle="bold"
         android:textSize="14sp"
+        android:letterSpacing="0.03"
+        android:lineSpacingExtra="4sp"
         app:layout_constraintEnd_toStartOf="@id/ivImage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -32,6 +35,7 @@
         android:id="@+id/tvAuthor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
         tools:text="Author"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle"/>
@@ -43,7 +47,6 @@
         android:layout_marginStart="8dp"
         tools:text="Comment Count"
         app:layout_constraintStart_toEndOf="@id/tvAuthor"
-        app:layout_constraintTop_toTopOf="@id/tvAuthor"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
     <View

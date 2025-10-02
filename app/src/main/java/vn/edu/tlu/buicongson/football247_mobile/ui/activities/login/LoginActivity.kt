@@ -2,11 +2,10 @@ package vn.edu.tlu.buicongson.football247_mobile.ui.activities.login
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import vn.edu.tlu.buicongson.football247_mobile.databinding.ActivityLoginBinding
-import vn.edu.tlu.buicongson.football247_mobile.ui.activities.home.HomeActivity
+import vn.edu.tlu.buicongson.football247_mobile.ui.activities.news.NewsActivity
 
 class LoginActivity : AppCompatActivity() {
     private val viewModel : LoginViewModel by viewModel()
@@ -49,7 +48,7 @@ class LoginActivity : AppCompatActivity() {
 
             else -> {
                 viewModel.checkPhone(username, password, check = {
-                    startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
+                    startActivity(Intent(this@LoginActivity, NewsActivity::class.java))
                 })
             }
         }
