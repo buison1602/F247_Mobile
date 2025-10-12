@@ -46,6 +46,5 @@ sealed class ArticleNewsViewHolder(binding: ViewBinding) : RecyclerView.ViewHold
 fun String.toImageUrl(): String {
     val localIp = IP_LOCAL
     var a = this.replace("localhost", localIp).replace("https", "http")
-//    Log.d("1111111111111111111111111111111111111111111111111111111111111111111111", a)
     return a
 }

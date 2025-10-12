@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activities.detailArticle.DetailArticleActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/ic_back_black"
+                    android:layout_marginStart="12dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivComment"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/ic_cmt_article"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="16dp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivSave"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/ic_save_article"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="16dp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivShare"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/ic_share_article"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="16dp" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.03"
+                android:lineSpacingExtra="4sp"
+                android:padding="20dp"
+                android:text="PSR? What PSR? Eight Premier League sides in 10 biggest spenders of summer 2025 - 123 456 789 777"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBgrImg"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:layout_centerInParent="true"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/mask_group_108" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivAvatar"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical"
+                        app:srcCompat="@drawable/rectangle_4" />
+
+                    <TextView
+                        android:id="@+id/tvAuthor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:text="Author Author"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvCreatedAt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="20dp"
+                    android:text="Created At"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvContentArticle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4dp"
+                    android:letterSpacing="0.02"
+                    android:text="Alexander-Arnold announced earlier this month that he will leave Liverpool at the end of his contract on the back of the Reds wrapping up their second Premier League title. Real Madrid have reportedly agreed terms with the England international, but the Spanish giants want Liverpool to release Alexander-Arnold before his contract expires on June 30, so that he can play in the all-new Club World Cup, starting on June 14.  READ MORE: Club World Cup 2025: What is it, why is it, who’s in it, should we care, and where can we watch on TV?  But Carragher has urged his former club to ask Madrid for a £10m fee if they want them to rip Alexander-Arnold’s contract up early, given how much money Los Blancos could earn through the tournament.  Carragher said on Sky Sports: “You’re announcing it now to give Real Madrid the opportunity to maybe sign you for the Club World Cup, so that’s what I was talking about a couple of weeks ago.”  Neville then interjected: “Would you take like a million quid if you were Liverpool for the Club World Cup?”  Carragher then replied: “Er, I think I’d want more than a million quid.”  Neville then further asked: “But would you take, would you take whatever price it would be to let him go and play in that tournament?”  Carragher replied: “I think if it was about five or ten million quid, because I think I could get, no, hang on, hang on.”. Carragher replied: “Exactly. Have you seen how much money it is to win it?”  Jones then asked: “So you could help a major European rival by helping them win the thing?”  Carragher said: “Right, well, but if they’re going to win a hundred million and he’s going to help them, because don’t forget, they haven’t got any right back. The right back to play in there is not a right back. So it’s not just like bringing a player in. Give us ten million quid.”  Neville concluded: “Well, the price has just been set, mate.”"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tvCommentCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="77" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="Comments"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/article_bottom" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/comment">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtComment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:paddingEnd="48dp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivSend"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|bottom"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:srcCompat="@drawable/ic_send_article" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvComments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/article_comment_item" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

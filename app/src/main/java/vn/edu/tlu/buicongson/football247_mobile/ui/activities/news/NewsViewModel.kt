@@ -5,7 +5,6 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import vn.edu.tlu.buicongson.football247_mobile.data.impl.NewsRepo
 import vn.edu.tlu.buicongson.football247_mobile.networks.entities.response.ArticleResponse
-import vn.edu.tlu.buicongson.football247_mobile.networks.entities.response.CategoryResponse
 import vn.edu.tlu.buicongson.football247_mobile.mappers.toCategoryWrapper
 import vn.edu.tlu.buicongson.football247_mobile.networks.entities.news.Category
 
@@ -16,7 +15,6 @@ class NewsViewModel (val newsRepo: NewsRepo) : ViewModel() {
             val response = newsRepo.getArticles()
 
             if (response != null) {
-
                 onComplete?.invoke(response)
             }
         }

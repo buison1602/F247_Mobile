@@ -2,10 +2,13 @@ package vn.edu.tlu.buicongson.football247_mobile.di
 
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
+import vn.edu.tlu.buicongson.football247_mobile.data.impl.DetailArticleRepo
+import vn.edu.tlu.buicongson.football247_mobile.data.impl.DetailArticleRepoImpl
 import vn.edu.tlu.buicongson.football247_mobile.data.impl.LoginRepo
 import vn.edu.tlu.buicongson.football247_mobile.data.impl.LoginRepoImpl
 import vn.edu.tlu.buicongson.football247_mobile.data.impl.NewsRepo
 import vn.edu.tlu.buicongson.football247_mobile.data.impl.NewsRepoImpl
+import vn.edu.tlu.buicongson.football247_mobile.ui.activities.detailArticle.DetailArticleViewModel
 import vn.edu.tlu.buicongson.football247_mobile.ui.activities.login.LoginViewModel
 import vn.edu.tlu.buicongson.football247_mobile.ui.activities.news.NewsViewModel
 
@@ -16,6 +19,10 @@ val models = module {
 
     viewModel {
         NewsViewModel(get() )
+    }
+
+    viewModel {
+        DetailArticleViewModel(get() )
     }
 }
 
@@ -28,6 +35,12 @@ val impls = module {
 
     single<NewsRepo> {
         NewsRepoImpl(
+            get()
+        )
+    }
+
+    single<DetailArticleRepo> {
+        DetailArticleRepoImpl(
             get()
         )
     }

@@ -6,7 +6,6 @@
 
     <application
         android:name=".main.MainApplication"
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,7 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Football247_Mobile"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
+        <activity
+            android:name=".ui.activities.detailArticle.DetailArticleActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Football247_Mobile" />
+
         <activity
             android:name=".ui.activities.news.NewsActivity"
             android:exported="false"

@@ -1,5 +1,6 @@
 package vn.edu.tlu.buicongson.football247_mobile.ui.activities.news
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import vn.edu.tlu.buicongson.football247_mobile.databinding.ActivityNewsBinding
 import vn.edu.tlu.buicongson.football247_mobile.networks.entities.news.News
+import vn.edu.tlu.buicongson.football247_mobile.ui.activities.detailArticle.DetailArticleActivity
 import vn.edu.tlu.buicongson.football247_mobile.ui.adapters.news.ArticleNewsAdapter
 import vn.edu.tlu.buicongson.football247_mobile.ui.adapters.news.CategoryNewsAdapter
 
@@ -58,6 +60,28 @@ class NewsActivity : AppCompatActivity() {
             }
             articlesAdapter.items = transformedArticles
         })
+
+        onClickArticle()
+    }
+
+    private fun onClickArticle() {
+        articlesAdapter.onItemClick = { clickedNewsItem ->
+            val slug = when (clickedNewsItem) {
+                is News.FirstArticle -> clickedNewsItem.article.slug
+                is News.NormalArticle -> clickedNewsItem.article.slug
+            }
+
+            val articleId = when (clickedNewsItem) {
+                is News.FirstArticle -> clickedNewsItem.article.id
+                is News.NormalArticle -> clickedNewsItem.article.id
+            }
+
+            var intent = Intent(this@NewsActivity, DetailArticleActivity::class.java).apply {
+                putExtra("Article_Slug", slug)
+                putExtra("Article_Id", articleId)
+            }
+            startActivity(intent)
+        }
     }
 
     private fun getListCategories() {

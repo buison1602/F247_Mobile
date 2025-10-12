@@ -10,6 +10,8 @@ import vn.edu.tlu.buicongson.football247_mobile.networks.entities.news.News
 
 class ArticleNewsAdapter : RecyclerView.Adapter<ArticleNewsViewHolder>() {
 
+    var onItemClick: ((News) -> Unit)? = null
+
     var items = listOf<News>()
         set(value) {
             field = value
@@ -34,6 +36,10 @@ class ArticleNewsAdapter : RecyclerView.Adapter<ArticleNewsViewHolder>() {
         when (holder) {
             is ArticleNewsViewHolder.FirstArticleViewHolder -> holder.bind(items[position] as News.FirstArticle)
             is ArticleNewsViewHolder.NormalArticleViewHolder -> holder.bind(items[position] as News.NormalArticle)
+        }
+
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(items[position])
         }
     }
 

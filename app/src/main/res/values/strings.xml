@@ -3,8 +3,10 @@
     <string name="text_logo">F247</string>
     <string name="login">Đăng nhập</string>
     <string name="user_name">Tên đăng nhập</string>
+    <string name="comment">Comment</string>
     <string name="pwd">Mật khẩu</string>
     <string name="forget_pass">Quên mật khẩu</string>
+    <string name="submit">Submit</string>
     <string name="faq">Hỏi đáp</string>
     <string name="share">Chia sẻ</string>
     <string name="contact">Liên hệ</string>
@@ -60,8 +62,6 @@
     <string name="discover">Discover</string>
     <string name="account">Account</string>
     <string name="name_category_news_item">Category</string>
-
-
 
 
 </resources>
