@@ -24,6 +24,7 @@ import java.util.Locale
 import kotlin.collections.first
 import kotlin.collections.isNotEmpty
 import kotlin.getValue
+import kotlin.text.trim
 
 class DetailArticleActivity : AppCompatActivity() {
 
@@ -61,6 +62,10 @@ class DetailArticleActivity : AppCompatActivity() {
             onBackPressedDispatcher.onBackPressed()
         }
 
+        binding.ivSend.setOnClickListener {
+            createComment()
+        }
+
         binding.rvComments.setHasFixedSize(true)
         binding.rvComments.layoutManager = LinearLayoutManager(this)
         binding.rvComments.adapter = commentsAdapter
@@ -94,4 +99,17 @@ class DetailArticleActivity : AppCompatActivity() {
 
     }
 
+    private fun createComment() {
+        val content = binding.edtComment.text.toString().trim()
+
+        if (content != null) {
+            viewModel.createComment(articleId, content, onComplete = { response ->
+                if (response != null) {
+                    binding.edtComment.setText("")
+
+                    getListComments()
+                }
+            })
+        }
+    }
 }

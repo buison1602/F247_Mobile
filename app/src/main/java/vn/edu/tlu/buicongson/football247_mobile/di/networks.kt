@@ -1,24 +1,31 @@
 package vn.edu.tlu.buicongson.football247_mobile.di
 
+import android.content.Context
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import java.util.concurrent.TimeUnit
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import com.google.gson.GsonBuilder
+import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 import vn.edu.tlu.buicongson.football247_mobile.constants.DatasourceProperties
 import vn.edu.tlu.buicongson.football247_mobile.constants.DatasourceProperties.TIMEOUT_CONNECT
 import vn.edu.tlu.buicongson.football247_mobile.constants.DatasourceProperties.TIMEOUT_READ
+import vn.edu.tlu.buicongson.football247_mobile.constants.Tags
 import vn.edu.tlu.buicongson.football247_mobile.data.Service
 
 val networks = module {
-    single { createOkHttpClient() }
+    single {
+        androidContext().getSharedPreferences(Tags.MY_APP, Context.MODE_PRIVATE)
+    }
+    single { AuthInterceptor(get()) }
+    single { createOkHttpClient(get() ) }
     single { createRetrofit(get(), DatasourceProperties.getUrl()) }
     single { createApiService(get()) }
 }
 
-fun createOkHttpClient(): OkHttpClient {
+fun createOkHttpClient(authInterceptor: AuthInterceptor): OkHttpClient {
     val logging = HttpLoggingInterceptor()
     logging.level = HttpLoggingInterceptor.Level.BODY
 
@@ -26,6 +33,7 @@ fun createOkHttpClient(): OkHttpClient {
         .connectTimeout(TIMEOUT_CONNECT, TimeUnit.SECONDS)
         .readTimeout(TIMEOUT_READ, TimeUnit.SECONDS)
         .addInterceptor(logging)
+        .addInterceptor(authInterceptor)
         .build()
 }
 

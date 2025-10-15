@@ -4,6 +4,7 @@ import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
+import vn.edu.tlu.buicongson.football247_mobile.networks.entities.request.AddCommentRequest
 import vn.edu.tlu.buicongson.football247_mobile.networks.entities.request.CheckPhone
 import vn.edu.tlu.buicongson.football247_mobile.networks.entities.response.ArticleResponse
 import vn.edu.tlu.buicongson.football247_mobile.networks.entities.response.CategoryResponse
@@ -32,4 +33,8 @@ interface Service {
     @Throws(Exception::class)
     @GET("/api/Comment/{articleId}")
     suspend fun getCommentsByArticleId(@Path("articleId") articleId: String) : List<CommentResponse>?
+
+    @Throws(Exception::class)
+    @POST("/api/Comment")
+    suspend fun createComment(@Body rq: AddCommentRequest) : CommentResponse?
 }

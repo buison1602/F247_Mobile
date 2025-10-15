@@ -2,6 +2,8 @@ package vn.edu.tlu.buicongson.football247_mobile.di
 
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
+import vn.edu.tlu.buicongson.football247_mobile.data.impl.CommentRepo
+import vn.edu.tlu.buicongson.football247_mobile.data.impl.CommentRepoImpl
 import vn.edu.tlu.buicongson.football247_mobile.data.impl.DetailArticleRepo
 import vn.edu.tlu.buicongson.football247_mobile.data.impl.DetailArticleRepoImpl
 import vn.edu.tlu.buicongson.football247_mobile.data.impl.LoginRepo
@@ -14,7 +16,7 @@ import vn.edu.tlu.buicongson.football247_mobile.ui.activities.news.NewsViewModel
 
 val models = module {
     viewModel {
-        LoginViewModel( get() )
+        LoginViewModel( get(), get() )
     }
 
     viewModel {
@@ -22,7 +24,7 @@ val models = module {
     }
 
     viewModel {
-        DetailArticleViewModel(get() )
+        DetailArticleViewModel(get(), get() )
     }
 }
 
@@ -41,6 +43,12 @@ val impls = module {
 
     single<DetailArticleRepo> {
         DetailArticleRepoImpl(
+            get()
+        )
+    }
+
+    single<CommentRepo> {
+        CommentRepoImpl(
             get()
         )
     }

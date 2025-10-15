@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     android:orientation="vertical">
 
@@ -10,61 +11,117 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="10dp"
         android:elevation="1dp"
         android:orientation="horizontal" >
 
-        <TextView
-            android:id="@+id/news"
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/news"
-            android:textSize="@dimen/ts_home_menu"
-            android:textColor="@color/menu_home"
-            android:clickable="true"
-            android:focusable="true"/>
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/scores"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/scores"
-            android:textSize="@dimen/ts_home_menu"
-            android:textColor="@color/menu_home"
-            android:clickable="true"
-            android:focusable="true"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivNews"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/ic_news" />
 
-        <TextView
-            android:id="@+id/discover"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/discover"
-            android:textSize="@dimen/ts_home_menu"
-            android:textColor="@color/menu_home"
-            android:clickable="true"
-            android:focusable="true"/>
+            <TextView
+                android:id="@+id/news"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/news"
+                android:textSize="@dimen/ts_home_menu"
+                android:textColor="@color/menu_home"
+                android:clickable="true"
+                android:focusable="true"/>
 
-        <TextView
-            android:id="@+id/account"
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/account"
-            android:textSize="@dimen/ts_home_menu"
-            android:textColor="@color/menu_home"
-            android:clickable="true"
-            android:focusable="true"/>
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivScores"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/ic_scores" />
+
+            <TextView
+                android:id="@+id/scores"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/scores"
+                android:textSize="@dimen/ts_home_menu"
+                android:textColor="@color/menu_home"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDiscover"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/ic_discover" />
+
+            <TextView
+                android:id="@+id/discover"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/discover"
+                android:textSize="@dimen/ts_home_menu"
+                android:textColor="@color/menu_home"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivAccount"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/ic_account" />
+
+            <TextView
+                android:id="@+id/account"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/account"
+                android:textSize="@dimen/ts_home_menu"
+                android:textColor="@color/menu_home"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 

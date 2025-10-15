@@ -6,8 +6,8 @@ object DatasourceProperties {
         return SERVER_URL
     }
 
-    const val IP_LOCAL = "192.168.1.191"
-    const val SERVER_URL = "http://192.168.1.191:7087/"
+    const val IP_LOCAL = "192.168.1.119"
+    const val SERVER_URL = "http://192.168.1.119:7087/"
     const val TIMEOUT_CONNECT: Long = 30
     const val TIMEOUT_READ: Long = 90
 }
