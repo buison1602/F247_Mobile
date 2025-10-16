@@ -23,7 +23,7 @@ interface Service {
     suspend fun getCategories() : List<CategoryResponse>?
 
     @Throws(Exception::class)
-    @GET("/api/Article")
+    @GET("/api/Article/Get5Articles")
     suspend fun getArticles() : List<ArticleResponse>?
 
     @Throws(Exception::class)

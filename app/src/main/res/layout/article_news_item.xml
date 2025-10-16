@@ -42,11 +42,19 @@
                     android:layout_height="wrap_content"
                     tools:text="Author"/>
 
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="-2dp"
+                    app:srcCompat="@drawable/ic_comment" />
+
                 <TextView
                     android:id="@+id/tvCmtCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="6dp"
                     tools:text="Comment Count"/>
 
             </LinearLayout>

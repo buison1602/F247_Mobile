@@ -62,6 +62,22 @@
     <string name="discover">Discover</string>
     <string name="account">Account</string>
     <string name="name_category_news_item">Category</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="savedstories">Saved Stories</string>
 
+    <string name="displaytheme">Display Theme</string>
+    <string name="emailpreferences">Email Preferences</string>
+    <string name="videopreferences">Video Preferences</string>
+    <string name="notifications">Notifications</string>
+    <string name="region">Region</string>
+
+    <string name="rateapp">Rate App</string>
+    <string name="faq2">FAQ</string>
+    <string name="contactsupport">Contact Support</string>
+    <string name="logout">Log Out</string>
+
+    <string name="privacypolicy">Privacy Policy</string>
+    <string name="termsofservice">Terms of Service</string>
+    <string name="version">16.02.2004</string>
 
 </resources>

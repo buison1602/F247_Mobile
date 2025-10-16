@@ -8,6 +8,7 @@
     <color name="colorPrimary">#ae1c3f</color>
     <color name="border">#DEDEDE</color>
     <color name="color_text">#444444</color>
+    <color name="color_space">#e0dcdc</color>
     <color name="default_color">#4e93e9</color>
     <color name="color_menu">#EEEEEE</color>
     <color name="color_banner_news">#161e26</color>

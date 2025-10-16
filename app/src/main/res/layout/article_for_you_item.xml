@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginEnd="8dp"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivImage"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/mask_group_108" />
+
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="6dp"
+        android:lineSpacingExtra="4dp"
+        android:letterSpacing="0.04"
+        android:text="Who should be in Endland's World Cup squad? Our experts give their view"
+        android:textStyle="bold"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tvAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Athletic"
+            android:textSize="11sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="-2dp"
+            app:srcCompat="@drawable/ic_comment" />
+
+        <TextView
+            android:id="@+id/tvCmtCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            tools:text="132"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

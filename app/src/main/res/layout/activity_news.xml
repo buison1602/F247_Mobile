@@ -63,21 +63,33 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvArticles"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_height="0dp"
         android:clipToPadding="false"
         android:overScrollMode="never"
 
         android:padding="5dp"
         android:paddingBottom="?attr/actionBarSize"
 
+        app:layout_constraintTop_toBottomOf="@id/rvCategories"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rvCategories"
-        app:layout_constraintVertical_bias="0.502"
+
         tools:listitem="@layout/article_news_item" />
+
+<!--        Thêm thằng nào vào rvArticles-->
+<!--    app:layout_constraintBottom_toTopOf="@id/articleCategoryForYou"-->
+
+
+<!--    <include-->
+<!--        android:id="@+id/articleCategoryForYou"-->
+<!--        layout="@layout/article_for_you"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/rvArticles"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
 
     <include
         android:id="@+id/bottomMenu"

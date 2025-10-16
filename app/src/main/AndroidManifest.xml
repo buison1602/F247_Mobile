@@ -16,17 +16,20 @@
         android:theme="@style/Theme.Football247_Mobile"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
+        <activity
+            android:name=".ui.activities.account.AccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.discover.DiscoverActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.activities.detailArticle.DetailArticleActivity"
             android:exported="false"
             android:theme="@style/Theme.Football247_Mobile" />
-
         <activity
             android:name=".ui.activities.news.NewsActivity"
             android:exported="false"
             android:theme="@style/Theme.Football247_Mobile" />
-
         <activity
             android:name=".ui.activities.login.LoginActivity"
             android:exported="true">
